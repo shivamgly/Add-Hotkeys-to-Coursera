@@ -1,0 +1,29 @@
+{
+  "background": {
+    "scripts": ["bscript.js"]
+  },
+  "description": "Open source Firefox addon to add Keyboard Shortcuts to Coursera Video player. It also let you control playback speed more precisely. Also includes Keyboard shortcut to seek video forward/backward.",
+  "homepage_url": "https://github.com/shivamgoyal15/Add-Hotkeys-to-Coursera",
+  "page_action": {
+    "default_title": "Add Hotkeys to Coursera",
+    "default_popup": "shortcuts.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "manifest_version": 2,
+  "name": "Add Hotkeys to Coursera",
+  "version": "1.1",
+  "content_scripts": [
+    {
+      "matches": ["https://www.coursera.org/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
